@@ -30,7 +30,8 @@ jobs:
       run: |
          echo "Hello ${{ github.event.inputs.name }}"
          curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
-         node --version
+    - name: Send greeting
+      run: |
          nvm install --lts
          nvm use --lts
          export NVM_DIR="/home/runner/.nvm/"
