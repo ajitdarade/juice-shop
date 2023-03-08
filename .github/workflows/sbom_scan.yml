@@ -26,17 +26,10 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
     # Runs a single command using the runners shell
-    - name: Send greeting
-      run: |
-         echo "Hello ${{ github.event.inputs.name }}"
-         curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+
     - name: Send greeting1
       run: |
-         nvm install --lts
-         nvm use --lts
-         export NVM_DIR="/home/runner/.nvm/"
-         [ -s "/home/runner/.nvm/nvm.sh" ] && \. "/home/runner/.nvm/nvm.sh"
-         [ -s "/home/runner/.nvm/bash_completion" ] && \. "/home/runner/.nvm/bash_completion"
+         node --version
          npm install -g @cyclonedx/bom
          cyclonedx-bom --output=./bom.xml ./
   #  - name: CycloneDX Node.js Generate SBOM
