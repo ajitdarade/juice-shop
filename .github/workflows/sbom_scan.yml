@@ -32,6 +32,7 @@ jobs:
          pwd
          node --version
          npm install -g @cyclonedx/bom
+         npm install
          cyclonedx-node --output /home/runner/work/juice-shop/juice-shop/bom.xml
 #         cyclonedx-bom --output=/home/runner/work/juice-shop/juice-shop/bom.xml /home/runner/work/juice-shop/juice-shop
   #  - name: CycloneDX Node.js Generate SBOM
