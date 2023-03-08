@@ -30,7 +30,7 @@ jobs:
       run: |
          echo "Hello ${{ github.event.inputs.name }}"
          curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
-    - name: Send greeting
+    - name: Send greeting1
       run: |
          nvm install --lts
          nvm use --lts
