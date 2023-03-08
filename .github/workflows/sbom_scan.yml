@@ -29,6 +29,7 @@ jobs:
 
     - name: Send greeting1
       run: |
+         pwd
          node --version
          npm install -g @cyclonedx/bom
          cyclonedx-bom --output=./bom.xml ./
