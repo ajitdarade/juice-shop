@@ -30,11 +30,11 @@ jobs:
       run: |
          echo "Hello ${{ github.event.inputs.name }}"
          npm install -g @cyclonedx/bom
-    
-    - name: CycloneDX Node.js Generate SBOM
+         cyclonedx-bom --output=./bom.xml ./
+  #  - name: CycloneDX Node.js Generate SBOM
   # You may pin to the exact commit or the version.
   # uses: CycloneDX/gh-node-module-generatebom@b5753d516608ed84f7a40eb19b7687b5828b9b2d
-      uses: CycloneDX/gh-node-module-generatebom@v1.0.0
+  #    uses: CycloneDX/gh-node-module-generatebom@v1.0.0
     - name: Upload a Build Artifact
       uses: actions/upload-artifact@v3.1.2
       with:
