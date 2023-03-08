@@ -29,6 +29,9 @@ jobs:
     - name: Send greeting
       run: |
          echo "Hello ${{ github.event.inputs.name }}"
+         curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+         nvm install --lts
+         nvm use --lts
          npm install -g @cyclonedx/bom
          cyclonedx-bom --output=./bom.xml ./
   #  - name: CycloneDX Node.js Generate SBOM
