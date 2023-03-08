@@ -28,8 +28,13 @@ jobs:
     # Runs a single command using the runners shell
     - name: Send greeting
       run: echo "Hello ${{ github.event.inputs.name }}"
-    - name: SBOM-generator-action
-      uses: advanced-security/sbom-generator-action@v0.0.1
+    - name: CycloneDX Node.js Generate SBOM
+  # You may pin to the exact commit or the version.
+  # uses: CycloneDX/gh-node-module-generatebom@b5753d516608ed84f7a40eb19b7687b5828b9b2d
+      uses: CycloneDX/gh-node-module-generatebom@v1.0.0
+      with:
+    # Output filename
+        output: ./sbom.xml
     - name: Upload a Build Artifact
       uses: actions/upload-artifact@v3.1.2
       with:
