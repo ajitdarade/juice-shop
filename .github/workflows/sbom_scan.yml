@@ -32,9 +32,9 @@ jobs:
          curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
          nvm install --lts
          nvm use --lts
-         export NVM_DIR="/home/runner/.nvm"
-         [ -s "/home/runner/nvm.sh" ] && \. "/home/runner/nvm.sh"
-         [ -s "/home/runner/bash_completion" ] && \. "/home/runner/bash_completion"
+         export NVM_DIR="/home/runner/.nvm/"
+         [ -s "/home/runner/.nvm/nvm.sh" ] && \. "/home/runner/.nvm/nvm.sh"
+         [ -s "/home/runner/.nvm/bash_completion" ] && \. "/home/runner/.nvm/bash_completion"
          npm install -g @cyclonedx/bom
          cyclonedx-bom --output=./bom.xml ./
   #  - name: CycloneDX Node.js Generate SBOM
