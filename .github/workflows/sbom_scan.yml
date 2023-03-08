@@ -34,7 +34,7 @@ jobs:
       uses: CycloneDX/gh-node-module-generatebom@v1.0.0
       with:
     # Output filename
-        output: ./sbom.xml
+        output: ./bom.xml
     - name: Upload a Build Artifact
       uses: actions/upload-artifact@v3.1.2
       with:
